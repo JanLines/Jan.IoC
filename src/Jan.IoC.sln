@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jan.IoC", "Jan.IoC\Jan.IoC.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jan.IoC.Tests", "Jan.IoC.Tests\Jan.IoC.Tests.csproj", "{3887DB51-4523-4F12-8421-F906BE862131}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConceptualExample", "ConceptualExample", "{32F625EE-7BD6-497C-989C-801405074584}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsSenderApp", "SmsSenderApp\SmsSenderApp.csproj", "{61B38039-A580-4BD0-A0F6-CBD554DECD33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +25,16 @@ Global
 		{3887DB51-4523-4F12-8421-F906BE862131}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3887DB51-4523-4F12-8421-F906BE862131}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3887DB51-4523-4F12-8421-F906BE862131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B38039-A580-4BD0-A0F6-CBD554DECD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B38039-A580-4BD0-A0F6-CBD554DECD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B38039-A580-4BD0-A0F6-CBD554DECD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B38039-A580-4BD0-A0F6-CBD554DECD33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61B38039-A580-4BD0-A0F6-CBD554DECD33} = {32F625EE-7BD6-497C-989C-801405074584}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6514716-CBA8-4A52-8180-CFA90308C000}
