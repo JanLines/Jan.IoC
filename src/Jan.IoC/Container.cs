@@ -8,9 +8,15 @@ namespace Jan.IoC
         private readonly Dictionary<Type, ServiceMetadata> _registeredServices = new Dictionary<Type, ServiceMetadata>();
         private readonly ServiceInstanceManager _serviceInstanceManager = new ServiceInstanceManager();
 
+        /// <summary>
+        /// Registers a service type and its implementation into the IoC container.
+        /// </summary>
+        /// <typeparam name="TService">Service Dependency</typeparam>
+        /// <typeparam name="TImplementation">Implementation of the Service</typeparam>
+        /// <param name="lifeCycleType">Lifetime of the object instance.</param>
         public void Register<TService, TImplementation>(LifecycleType lifeCycleType = LifecycleType.Transient)
             where TService : class
-            where TImplementation : TService
+            where TImplementation : TService, new()
         {
             var serviceType = typeof(TService);
 
@@ -29,6 +35,11 @@ namespace Jan.IoC
             _registeredServices.Add(serviceType, serviceMetadata);
         }
         
+        /// <summary>
+        /// Requests for an implementation instace of a given service dependency from the IoC container.
+        /// </summary>
+        /// <typeparam name="TService">Service Dependency</typeparam>
+        /// <returns>Implementation Instance of the service</returns>
         public TService Resolve<TService>()
             where TService : class
         {
