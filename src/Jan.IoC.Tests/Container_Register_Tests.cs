@@ -2,16 +2,16 @@
 
 namespace Jan.IoC.Tests
 {
-    class ContainerTests
+    class Container_Register_Tests
     {
         [TestCase(LifecycleType.Transient)]
         [TestCase(LifecycleType.Singleton)]
-        public void Can_Register_A_Dependency(LifecycleType lifecycle)
+        public void Can_Register_A_Dependency(LifecycleType lifecycleType)
         {                        
             var container = new Container();
             Assert.DoesNotThrow
             (
-                () => container.Register<IDummyService, DummyService>(lifecycle)
+                () => container.Register<IDummyService, DummyService>(lifecycleType)
             );
         }
 
@@ -25,6 +25,6 @@ namespace Jan.IoC.Tests
             (
                 () => container.Register<IDummyService, AnotherDummyService>()
             );
-        }
+        }      
     }
 }
